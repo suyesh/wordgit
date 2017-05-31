@@ -19,7 +19,7 @@ module Wordgit
       end
 
       def check_init
-        File.directory? './.git' && File.directory? './.wrdgit'
+        File.directory?('./.git') && File.directory?('./.wrdgit')
       end
 
       def init_message
