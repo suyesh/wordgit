@@ -8,6 +8,9 @@ module Wordgit
   class Cli < Thor
     include Thor::Actions
 
+    ####################################################################################################################
+    ## wordgit add [parameters] or option --all will add single or multiple files to the git repo to track
+    ####################################################################################################################
     desc "Add PATH","Add files to track. Pass '--all' to add all files"
     method_options :all => false
     def add(*path)
@@ -37,5 +40,7 @@ module Wordgit
         puts "You need to provide a file path or you can pass an option '--all' to track all files".colorize(:blue)
       end
     end
+
+
   end
 end
