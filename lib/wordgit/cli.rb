@@ -23,9 +23,8 @@ module Wordgit
       end
 
       def init_message
-        puts "No wordgit repo was found. Do you want to initialize it? [Y|N]".colorize :blue
-        input = gets.chomp
-        # input == 'y' || input == 'Y' ? Wordgit::Init.start : nil
+        input = ask("No wordgit repo was found. Do you want to initialize it? [Y|N]".colorize :blue)
+        input == 'y' || input == 'Y' ? Wordgit::Init.start : nil
       end
     end
 
