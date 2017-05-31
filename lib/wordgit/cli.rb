@@ -69,7 +69,9 @@ module Wordgit
     def log
       init_message unless check_init
       g = Git.open'.'
-      g.gcommit(treeish)
+      g.log.each do |log|
+        g.show(log)
+      end
     end
 
   end
