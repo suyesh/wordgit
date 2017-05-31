@@ -85,7 +85,7 @@ module Wordgit
     def diff(*version)
       init_message unless check_init
       g = Git.open'.'
-      puts g.diff(version[0], version[1])
+      puts g.diff(version[0], version[1]).patch
     end
 
   end
