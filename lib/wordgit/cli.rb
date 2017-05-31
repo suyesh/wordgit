@@ -73,7 +73,7 @@ module Wordgit
       g = Git.open'.'
       g.tags.each do |tag|
         commit = g.gcommit(tag)
-        puts tag + "   " + commit.author + "  " + commit.message + "   " + commit.date.strftime("%m-%d-%y")
+         say("#{tag} #{commit.auhor} #{commit.message} #{commit.date.strftime('%m-%d-%y')}")
       end
     end
 
