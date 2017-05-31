@@ -55,22 +55,25 @@ module Wordgit
 
     desc "commit", "Commits the changes to the repo. -m followed by message as string 'your message' is required"
     method_option :message, aliases: "-m", desc: "Add message to the commit.",required: true
+    method_option :version, aliases: "-v", desc: "Add version number", required: true
     def commit
       init_message unless check_init
       g = Git.open'.'
       g.commit(options[:message])
+      g.add_tag(options[:version])
     end
 
     ####################################################################################################################
     ## wordgit log, will display the logs of commits
     ####################################################################################################################
 
-    desc "log", "Displays history of commits"
-    def log
+    desc "versions", "Displays list of version"
+    def versions
       init_message unless check_init
       g = Git.open'.'
-      g.log.each do |log|
-        puts g.show(log)
+      g.tags.each do |tag|
+        commit = g.gcommit(tag)
+        say(commit.author.date.strftime("%m-%d-%y"))
       end
     end
 
