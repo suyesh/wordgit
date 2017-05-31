@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'wordgit'
+require 'thor'
+
+if ARGV[0] == 'init'
+  Wordgit::Init.start
+else
+  Wordgit::Cli.start(ARGV)
+end
