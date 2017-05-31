@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3a099c8-cf44-4ebc-a681-805357c8b513" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/wordgit/add.rb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/wordgit/cli.rb" afterPath="$PROJECT_DIR$/lib/wordgit/cli.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +20,8 @@
       <file leaf-file-name="cli.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/wordgit/cli.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="44" lean-forward="false" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+            <state relative-caret-position="270">
+              <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -382,12 +381,12 @@
       <updated>1496173293391</updated>
       <workItem from="1496173295902" duration="4172000" />
       <workItem from="1496185911843" duration="751000" />
-      <workItem from="1496237022894" duration="3683000" />
+      <workItem from="1496237022894" duration="3763000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8606000" />
+    <option name="totallyTimeSpent" value="8686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
@@ -521,8 +520,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/wordgit/cli.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="44" lean-forward="false" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+        <state relative-caret-position="270">
+          <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
           <folding />
         </state>
       </provider>

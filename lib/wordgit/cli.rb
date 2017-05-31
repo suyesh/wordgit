@@ -8,14 +8,17 @@ module Wordgit
   class Cli < Thor
     include Thor::Actions
 
-    def create_files_and_folders(word_file)
-      file = WordToMarkdown.new(word_file)
-      dir_name = File.dirname(word_file)
-      empty_directory "./.wrdgit/#{dir_name}"
-      create_file "./.wrdgit/#{dir_name}/#{File.basename(word_file, '.docx')}.md", force: true do
-        file.to_s
+    no_commands do
+      def create_files_and_folders(word_file)
+        file = WordToMarkdown.new(word_file)
+        dir_name = File.dirname(word_file)
+        empty_directory "./.wrdgit/#{dir_name}"
+        create_file "./.wrdgit/#{dir_name}/#{File.basename(word_file, '.docx')}.md", force: true do
+          file.to_s
+        end
       end
     end
+
 
     ####################################################################################################################
     ## wordgit add [parameters] or option --all will add single or multiple files to the git repo to track
