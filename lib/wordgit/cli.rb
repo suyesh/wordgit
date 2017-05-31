@@ -33,8 +33,8 @@ module Wordgit
     ## wordgit add [parameters] or option --all will add single or multiple files to the git repo to track
     ####################################################################################################################
 
-    desc "Add PATH","Add files to track. Pass '--all' to add all files"
-    method_options :all => false
+    desc "add PATH","Add files to track. Pass '--all' to add all files"
+    method_options all: false
     def add(*path)
       init_message unless check_init
       if options[:all]
@@ -42,12 +42,17 @@ module Wordgit
       elsif path.count > 0
         path.each {|word_file| create_files_and_folders word_file }
       else
-        puts "You need to provide a file path or you can pass an option '--all' to track all files".colorize :blue
+        say("You need to provide a file path or you can pass an option '--all' to track all files".colorize :blue)
       end
       g = Git.open'.'
       g.add all: true
     end
 
-
+    desc "commit", "Commits the changes to the repo. --note=[NOTE] is required"
+    method_option :message, aliases: "-m", desc: "Add message to the commit.",required: true
+    def commit
+      g = Git.open'.'
+      g.commit(options[:message])
+    end
   end
 end
