@@ -77,5 +77,20 @@ module Wordgit
       end
     end
 
+    ####################################################################################################################
+    ## wordgit diff VERSION1 VERSION2, view differences in 2 versions
+    ####################################################################################################################
+
+    desc "diff [VERSION1] [VERSION2]", "Displays differences between two versions"
+    def diff(*version)
+      init_message unless check_init
+      g = Git.open'.'
+      g.gtree(version[0]).diff(version[1]).each do |file_diff|
+        puts file_diff.path
+        puts file_diff.patch
+        puts file_diff.blob(:src).contents
+      end
+    end
+
   end
 end
