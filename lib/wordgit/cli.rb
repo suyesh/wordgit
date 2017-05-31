@@ -85,11 +85,7 @@ module Wordgit
     def diff(*version)
       init_message unless check_init
       g = Git.open'.'
-      g.gtree(version[0]).diff(version[1]).each do |file_diff|
-        puts file_diff.path
-        puts file_diff.patch
-        puts file_diff.blob(:src).contents
-      end
+      puts g.diff(version[0], version[1])
     end
 
   end
