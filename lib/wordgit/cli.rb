@@ -48,11 +48,29 @@ module Wordgit
       g.add all: true
     end
 
+
+    ####################################################################################################################
+    ## wordgit commit -m 'a message' will commit the changes with a message
+    ####################################################################################################################
+
     desc "commit", "Commits the changes to the repo. -m followed by message as string 'your message' is required"
     method_option :message, aliases: "-m", desc: "Add message to the commit.",required: true
     def commit
+      init_message unless check_init
       g = Git.open'.'
       g.commit(options[:message])
     end
+
+    ####################################################################################################################
+    ## wordgit log, will display the logs of commits
+    ####################################################################################################################
+
+    desc "log", "Displays history of commits"
+    def log
+      init_message unless check_init
+      g = Git.open'.'
+      puts g.log
+    end
+
   end
 end
