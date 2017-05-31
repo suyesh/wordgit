@@ -20,8 +20,8 @@
       <file leaf-file-name="cli.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/wordgit/cli.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+            <state relative-caret-position="573">
+              <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -70,8 +70,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="207" />
-    <option name="y" value="249" />
+    <option name="x" value="162" />
+    <option name="y" value="89" />
     <option name="width" value="1440" />
     <option name="height" value="874" />
   </component>
@@ -403,15 +403,15 @@
       <workItem from="1496173295902" duration="4172000" />
       <workItem from="1496185911843" duration="751000" />
       <workItem from="1496237022894" duration="3900000" />
-      <workItem from="1496248155096" duration="1919000" />
+      <workItem from="1496248155096" duration="2004000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10742000" />
+    <option name="totallyTimeSpent" value="10827000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="207" y="249" width="1440" height="874" extended-state="0" />
+    <frame x="162" y="89" width="1440" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12875536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -522,8 +522,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/wordgit/cli.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        <state relative-caret-position="573">
+          <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
           <folding />
         </state>
       </provider>
