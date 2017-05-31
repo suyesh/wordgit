@@ -24,7 +24,7 @@ module Wordgit
 
       def init_message
         input = ask("No wordgit repo was found. Do you want to initialize it? [Y|N]".colorize :blue)
-        input == 'y' || input == 'Y' ? Wordgit::Init.start : nil
+        input == 'y' || input == 'Y' ? Wordgit::Init.start : abort("Exiting Wordgit since no repo was found!")
       end
     end
 
