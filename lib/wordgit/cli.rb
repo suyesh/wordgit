@@ -2,7 +2,7 @@ require 'thor'
 require 'git'
 require 'word-to-markdown'
 require 'colorize'
-require 'add'
+require_relative './add.rb'
 
 
 module Wordgit
