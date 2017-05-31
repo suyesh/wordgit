@@ -13,7 +13,9 @@ module Wordgit
         file = WordToMarkdown.new word_file
         dir_name = File.dirname word_file
         empty_directory "./.wrdgit/#{dir_name}"
-        create_file "./.wrdgit/#{dir_name}/#{File.basename word_file, '.docx'}.md", force: true { file.to_s }
+        create_file "./.wrdgit/#{dir_name}/#{File.basename word_file, '.docx'}.md", force: true do
+          file.to_s
+        end
       end
     end
 

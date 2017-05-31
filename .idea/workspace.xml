@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3a099c8-cf44-4ebc-a681-805357c8b513" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/wordgit/cli.rb" afterPath="$PROJECT_DIR$/lib/wordgit/cli.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/wordgit/init.rb" afterPath="$PROJECT_DIR$/lib/wordgit/init.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,8 +20,8 @@
       <file leaf-file-name="cli.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/wordgit/cli.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+            <state relative-caret-position="285">
+              <caret line="19" column="7" lean-forward="false" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -40,8 +38,8 @@
         <option value="$PROJECT_DIR$/exe/wordgit" />
         <option value="$PROJECT_DIR$/wordgit.gemspec" />
         <option value="$PROJECT_DIR$/lib/wordgit/add.rb" />
-        <option value="$PROJECT_DIR$/lib/wordgit/cli.rb" />
         <option value="$PROJECT_DIR$/lib/wordgit/init.rb" />
+        <option value="$PROJECT_DIR$/lib/wordgit/cli.rb" />
       </list>
     </option>
   </component>
@@ -370,12 +368,12 @@
       <workItem from="1496173295902" duration="4172000" />
       <workItem from="1496185911843" duration="751000" />
       <workItem from="1496237022894" duration="3900000" />
-      <workItem from="1496248155096" duration="280000" />
+      <workItem from="1496248155096" duration="349000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9103000" />
+    <option name="totallyTimeSpent" value="9172000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
@@ -507,8 +505,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/wordgit/cli.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        <state relative-caret-position="285">
+          <caret line="19" column="7" lean-forward="false" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
           <folding />
         </state>
       </provider>
