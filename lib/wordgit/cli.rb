@@ -13,7 +13,19 @@ module Wordgit
         file = WordToMarkdown.new word_file
         dir_name = File.dirname word_file
         empty_directory "./.wrdgit/#{dir_name}"
-        create_file "./.wrdgit/#{dir_name}/#{File.basename word_file, '.docx'}.md", force: true, {file.to_s}
+        create_file "./.wrdgit/#{dir_name}/#{File.basename word_file, '.docx'}.md", force: true do
+          file.to_s
+        end
+      end
+
+      def check_init
+        File.directory? './.git' && File.directory? './.wrdgit'
+      end
+
+      def init_message
+        puts "No wordgit repo was found. Do you want to initialize it? [Y|N]".colorize :blue
+        input = gets.chomp.downcase
+        input == 'y' ? Wordgit::Init.start : nil
       end
     end
 
@@ -25,6 +37,7 @@ module Wordgit
     desc "Add PATH","Add files to track. Pass '--all' to add all files"
     method_options :all => false
     def add(*path)
+      init_message unless check_init
       if options[:all]
         Dir['**/*.docx'].reject{ |f| f['./.git'] || f['./.wrdgit'] }.each {|word_file| create_files_and_folders word_file }
       elsif path.count > 0
