@@ -50,7 +50,7 @@ module Wordgit
 
 
     ####################################################################################################################
-    ## wordgit commit -m 'a message' will commit the changes with a message
+    ## wordgit commit -m 'a message' will commit the changes with a message and a tag
     ####################################################################################################################
 
     desc "commit", "Commits the changes to the repo. -m followed by message as string 'your message' is required"
@@ -64,7 +64,7 @@ module Wordgit
     end
 
     ####################################################################################################################
-    ## wordgit log, will display the logs of commits
+    ## wordgit versions, will display the versions
     ####################################################################################################################
 
     desc "versions", "Displays list of version"
