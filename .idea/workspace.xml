@@ -21,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/lib/wordgit/cli.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="633">
-              <caret line="72" column="19" lean-forward="false" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="19" />
+              <caret line="72" column="13" lean-forward="false" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -404,12 +404,12 @@
       <workItem from="1496185911843" duration="751000" />
       <workItem from="1496237022894" duration="3900000" />
       <workItem from="1496248155096" duration="3034000" />
-      <workItem from="1496261676547" duration="1415000" />
+      <workItem from="1496261676547" duration="1447000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13272000" />
+    <option name="totallyTimeSpent" value="13304000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="139" y="98" width="1440" height="874" extended-state="0" />
@@ -548,7 +548,7 @@
     <entry file="file://$PROJECT_DIR$/lib/wordgit/cli.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="633">
-          <caret line="72" column="19" lean-forward="false" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="19" />
+          <caret line="72" column="13" lean-forward="false" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
           <folding />
         </state>
       </provider>

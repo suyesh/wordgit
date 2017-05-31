@@ -70,7 +70,7 @@ module Wordgit
       init_message unless check_init
       g = Git.open'.'
       g.log.each do |log|
-        g.show(log)
+        puts g.show(log)
       end
     end
 
