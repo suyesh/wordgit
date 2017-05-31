@@ -20,9 +20,13 @@
       <file leaf-file-name="cli.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/wordgit/cli.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
-              <caret line="77" column="9" lean-forward="true" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="603">
+              <caret line="75" column="21" lean-forward="false" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
+              <folding>
+                <marker date="1496265456000" expanded="true" signature="103:3259" ph=" ... end" />
+                <marker date="1496265456000" expanded="true" signature="2943:3255" ph=" ... end" />
+                <marker date="1496265456000" expanded="true" signature="3021:3248" ph="do ... end" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -404,12 +408,12 @@
       <workItem from="1496185911843" duration="751000" />
       <workItem from="1496237022894" duration="3900000" />
       <workItem from="1496248155096" duration="3034000" />
-      <workItem from="1496261676547" duration="2512000" />
+      <workItem from="1496261676547" duration="2561000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14369000" />
+    <option name="totallyTimeSpent" value="14418000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="56" width="1440" height="874" extended-state="0" />
@@ -454,7 +458,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1496265456000" expanded="true" signature="103:3259" ph=" ... end" />
+            <marker date="1496265456000" expanded="true" signature="2943:3255" ph=" ... end" />
+            <marker date="1496265456000" expanded="true" signature="3021:3248" ph="do ... end" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -478,7 +486,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1496265456000" expanded="true" signature="103:3259" ph=" ... end" />
+            <marker date="1496265456000" expanded="true" signature="2943:3255" ph=" ... end" />
+            <marker date="1496265456000" expanded="true" signature="3021:3248" ph="do ... end" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -486,7 +498,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1496265456000" expanded="true" signature="103:3259" ph=" ... end" />
+            <marker date="1496265456000" expanded="true" signature="2943:3255" ph=" ... end" />
+            <marker date="1496265456000" expanded="true" signature="3021:3248" ph="do ... end" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -502,7 +518,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1496265456000" expanded="true" signature="103:3259" ph=" ... end" />
+            <marker date="1496265456000" expanded="true" signature="2943:3255" ph=" ... end" />
+            <marker date="1496265456000" expanded="true" signature="3021:3248" ph="do ... end" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -547,9 +567,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/wordgit/cli.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="77" column="9" lean-forward="true" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="603">
+          <caret line="75" column="21" lean-forward="false" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
+          <folding>
+            <marker date="1496265456000" expanded="true" signature="103:3259" ph=" ... end" />
+            <marker date="1496265456000" expanded="true" signature="2943:3255" ph=" ... end" />
+            <marker date="1496265456000" expanded="true" signature="3021:3248" ph="do ... end" />
+          </folding>
         </state>
       </provider>
     </entry>
