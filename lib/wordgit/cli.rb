@@ -101,7 +101,6 @@ module Wordgit
         g.checkout('master')
         say("Switched to the current version of the document".colorize :green)
       else
-        g = Git.open'.'
         g.checkout("v#{version[0]}")
         say("Switched to the v#{version[0]} of the document".colorize :green)
         # say("DONT FORGET TO SWITCH TO THE MAIN VERSION ONCE YOU ARE DONE".colorize :red)
