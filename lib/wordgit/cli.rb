@@ -99,7 +99,6 @@ module Wordgit
       init_message unless check_init
       if options[:back]
         g = Git.open'.'
-        g.stash
         g.checkout('master')
         say("Switched to the current version of the document".colorize :green)
       else
