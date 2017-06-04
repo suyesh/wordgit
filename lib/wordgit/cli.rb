@@ -55,12 +55,12 @@ module Wordgit
 
     desc "commit", "Commits the changes to the repo. -m followed by message as string 'your message' is required"
     method_option :message, aliases: "-m", desc: "Add message to the commit.",required: true
-    method_option :version, aliases: "-v", desc: "Add version number", required: true
+    method_option :version, type: :numeric,aliases: "-v", desc: "Add version number", required: true
     def commit
       init_message unless check_init
       g = Git.open'.'
       g.commit(options[:message])
-      g.add_tag(options[:version])
+      g.add_tag("v#{options[:version]}")
     end
 
     ####################################################################################################################
