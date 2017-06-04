@@ -42,12 +42,12 @@ module Wordgit
       init_message unless check_init
       if options[:all]
         Dir['**/*.docx'].reject{ |f| f['./.git'] || f['./.wrdgit'] }.each do |word_file|
-          next if word_file.start_with('$')
+          next if word_file.start_with?('$')
           create_files_and_folders word_file, "v#{options[:version]}"
         end
       elsif path.count > 0
         path.each do |word_file|
-          next if word_file.start_with('$')
+          next if word_file.start_with?('$')
           create_files_and_folders word_file, "v#{options[:version]}"
         end
       else
