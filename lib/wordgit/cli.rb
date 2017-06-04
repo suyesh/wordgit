@@ -88,5 +88,16 @@ module Wordgit
       puts g.diff(version[0], version[1]).patch
     end
 
+
+    ####################################################################################################################
+    ## wordgit switch VERSION, view preview of version
+    ####################################################################################################################
+
+    desc "switch [VERSION]", "Switch between version"
+    def switch(version)
+      init_message unless check_init
+      g = Git.open'.'
+      g.checkout("v#{version}")
+    end
   end
 end
