@@ -69,6 +69,7 @@ module Wordgit
       g = Git.open'.'
       g.tags.each do |tag|
         commit = g.gcommit(tag)
+        puts tag.methods.inspect
          say("#{tag.name.colorize :red}     #{commit.author.name.colorize :blue}     #{commit.message.colorize :green}     #{commit.date.strftime('%m-%d-%y').colorize :blue}")
       end
     end
