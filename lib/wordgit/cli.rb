@@ -67,9 +67,10 @@ module Wordgit
     def versions
       init_message unless check_init
       g = Git.open'.'
+
       g.tags.each do |tag|
         commit = g.gcommit(tag)
-         say("#{tag.name.colorize :red} #{system('git branch | sed -n \'/\* /s///p\'')}     #{commit.author.name.colorize :blue}     #{commit.message.colorize :green}     #{commit.date.strftime('%m-%d-%y').colorize :blue}")
+         say("#{tag.name.colorize :red}  #{commit.author.name.colorize :blue}     #{commit.message.colorize :green}     #{commit.date.strftime('%m-%d-%y').colorize :blue}")
       end
     end
 
