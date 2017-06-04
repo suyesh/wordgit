@@ -34,7 +34,7 @@ module Wordgit
     ## wordgit commit -m 'a message' -v [VERSION] will commit the changes with a message and a tag
     ####################################################################################################################
 
-    desc "commit", "Commits the changes to the repo. -m followed by message as string 'your message' is required"
+    desc "commit [PATH] OR --all", "Commits the changes to the repo. -m followed by message as string 'your message' is required"
     method_option :message, aliases: "-m", desc: "Add message to the commit.",required: true
     method_option :version, type: :numeric,aliases: "-v", desc: "Add version number", required: true
     method_options all: false
@@ -47,7 +47,7 @@ module Wordgit
         end
       elsif path.count > 0
         path.each do |word_file|
-          next if word_file.start_with('$') 
+          next if word_file.start_with('$')
           create_files_and_folders word_file, "v#{options[:version]}"
         end
       else
