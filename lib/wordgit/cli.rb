@@ -67,7 +67,6 @@ module Wordgit
     def versions
       init_message unless check_init
       g = Git.open'.'
-
       g.tags.each do |tag|
         commit = g.gcommit(tag)
          say("#{tag.name.colorize :red}  #{commit.author.name.colorize :blue}     #{commit.message.colorize :green}     #{commit.date.strftime('%m-%d-%y').colorize :blue}")
@@ -82,7 +81,7 @@ module Wordgit
     def diff(*version)
       init_message unless check_init
       g = Git.open'.'
-      puts g.diff(version[0], version[1]).patch
+      #TODO
     end
 
 
