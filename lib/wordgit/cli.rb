@@ -34,7 +34,7 @@ module Wordgit
     ## wordgit commit -m 'a message' -v [VERSION] will commit the changes with a message and a tag
     ####################################################################################################################
 
-    desc "commit [PATH] OR --all", "Commits the changes to the repo. -m followed by message as string 'your message' is required"
+    desc "commit '[PATH] OR --all'", "Commits the changes to the repo. -m followed by message as string 'your message' is required"
     method_option :message, aliases: "-m", desc: "Add message to the commit.",required: true
     method_option :version, type: :numeric,aliases: "-v", desc: "Add version number", required: true
     method_options all: false
