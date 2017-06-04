@@ -118,6 +118,7 @@ module Wordgit
       init_message unless check_init
       input = ask("You are reverting to #{version[0]}. Are you sure? [Y|N]".colorize :blue)
       if input == 'Y' || input == 'y'
+        g = Git.open'.'
         g.checkout('master')
         system "git reset --hard v#{version[0]}"
       end
