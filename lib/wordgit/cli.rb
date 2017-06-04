@@ -9,11 +9,13 @@ module Wordgit
     include Thor::Actions
 
     no_commands do
-      def create_files_and_folders(word_file)
+      def create_files_and_folders(word_file, version)
         file = WordToMarkdown.new word_file
         dir_name = File.dirname word_file
-        empty_directory "./.wrdgit/#{dir_name}"
-        create_file "./.wrdgit/#{dir_name}/#{File.basename word_file, '.docx'}.md", force: true do
+        empty_directory "./wrdgit"
+        empty_directory "./wrdgit/#{version}"
+        empty_directory "./.wrdgit/#{version}/#{dir_name}"
+        create_file "./.wrdgit/#{version}/#{dir_name}/#{File.basename word_file, '.docx'}.md", force: true do
           file.to_s
         end
       end
@@ -28,37 +30,25 @@ module Wordgit
       end
     end
 
-
     ####################################################################################################################
-    ## wordgit add [parameters] or option --all will add single or multiple files to the git repo to track
-    ####################################################################################################################
-
-    desc "add PATH","Add files to track. Or just say '--all' instead of supplying PATH to add all files"
-    method_options all: false
-    def add(*path)
-      init_message unless check_init
-      if options[:all]
-        Dir['**/*.docx'].reject{ |f| f['./.git'] || f['./.wrdgit'] }.each {|word_file| create_files_and_folders word_file }
-      elsif path.count > 0
-        path.each {|word_file| create_files_and_folders word_file }
-      else
-        say("You need to provide a file path or you can pass an option '--all' to track all files".colorize :blue)
-      end
-      g = Git.open'.'
-      g.add all: true
-    end
-
-
-    ####################################################################################################################
-    ## wordgit commit -m 'a message' will commit the changes with a message and a tag
+    ## wordgit commit -m 'a message' -v [VERSION] will commit the changes with a message and a tag
     ####################################################################################################################
 
     desc "commit", "Commits the changes to the repo. -m followed by message as string 'your message' is required"
     method_option :message, aliases: "-m", desc: "Add message to the commit.",required: true
     method_option :version, type: :numeric,aliases: "-v", desc: "Add version number", required: true
+    method_options all: false
     def commit
       init_message unless check_init
+      if options[:all]
+        Dir['**/*.docx'].reject{ |f| f['./.git'] || f['./.wrdgit'] }.each {|word_file| create_files_and_folders word_file, "v#{options[:version]}"}
+      elsif path.count > 0
+        path.each {|word_file| create_files_and_folders word_file, "v#{options[:version]}" }
+      else
+        say("You need to provide a file path or you can pass an option '--all' to track all files".colorize :blue)
+      end
       g = Git.open'.'
+      g.add all: true
       g.commit(options[:message])
       g.add_tag("v#{options[:version]}")
     end
