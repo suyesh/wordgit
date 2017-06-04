@@ -12,8 +12,8 @@ module Wordgit
       def create_files_and_folders(word_file, version)
         file = WordToMarkdown.new word_file
         dir_name = File.dirname word_file
-        empty_directory "./wrdgit"
-        empty_directory "./wrdgit/#{version}"
+        empty_directory "./.wrdgit"
+        empty_directory "./.wrdgit/#{version}"
         empty_directory "./.wrdgit/#{version}/#{dir_name}"
         create_file "./.wrdgit/#{version}/#{dir_name}/#{File.basename word_file, '.docx'}.md", force: true do
           file.to_s
@@ -41,9 +41,15 @@ module Wordgit
     def commit(*path)
       init_message unless check_init
       if options[:all]
-        Dir['**/*.docx'].reject{ |f| f['./.git'] || f['./.wrdgit'] }.each {|word_file| create_files_and_folders word_file, "v#{options[:version]}"}
+        Dir['**/*.docx'].reject{ |f| f['./.git'] || f['./.wrdgit'] }.each do |word_file|
+          next if word_file.start_with('$')
+          create_files_and_folders word_file, "v#{options[:version]}"
+        end
       elsif path.count > 0
-        path.each {|word_file| create_files_and_folders word_file, "v#{options[:version]}" }
+        path.each do |word_file|
+          next if word_file.start_with('$') 
+          create_files_and_folders word_file, "v#{options[:version]}"
+        end
       else
         say("You need to provide a file path or you can pass an option '--all' to track all files".colorize :blue)
       end
