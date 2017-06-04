@@ -85,7 +85,7 @@ module Wordgit
 
     desc "switch [VERSION]", "Switch between version"
     method_option :back, type: :boolean, default: false, aliases: "-b", desc: "Switch back to the Current version"
-    def preview(*version)
+    def switch(*version)
       init_message unless check_init
       if options[:back]
         g = Git.open'.'
@@ -95,7 +95,7 @@ module Wordgit
         g = Git.open'.'
         g.checkout("v#{version[0]}")
         say("Switched to the v#{version[0]} of the document".colorize :green)
-        say("DONT FORGET TO SWITCH TO THE MAIN VERSION ONCE YOU ARE DONE".colorize :red)
+        # say("DONT FORGET TO SWITCH TO THE MAIN VERSION ONCE YOU ARE DONE".colorize :red)
       end
     end
 
