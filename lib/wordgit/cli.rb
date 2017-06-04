@@ -95,7 +95,7 @@ module Wordgit
 
     desc "switch [VERSION]", "Switch between version"
     method_option :back, type: :boolean, default: false, aliases: "-b", desc: "Switch back to the Current version"
-    def switch(*version)
+    def preview(*version)
       init_message unless check_init
       if options[:back]
         g = Git.open'.'
@@ -106,6 +106,20 @@ module Wordgit
         g.checkout("v#{version[0]}")
         say("Switched to the v#{version[0]} of the document".colorize :green)
         say("DONT FORGET TO SWITCH TO THE MAIN VERSION ONCE YOU ARE DONE".colorize :red)
+      end
+    end
+
+    ####################################################################################################################
+    ## wordgit revert VERSION, change to a version
+    ####################################################################################################################
+
+    desc "revert [VERSION]", "revert between version"
+    def revert(*version)
+      init_message unless check_init
+      input = ask("You are reverting to #{version[0]}. Are you sure? [Y|N]".colorize :blue)
+      if input == 'Y' || input == 'y'
+        g.checkout('master')
+        system "git reset --hard v#{version[0]}"
       end
     end
   end
