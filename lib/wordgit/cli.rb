@@ -93,8 +93,11 @@ module Wordgit
     method_option :back, type: :boolean, default: false, aliases: "-b", desc: "Switch back to the Current version"
     def switch(*version)
       init_message unless check_init
+      g = Git.open'.'
+      g.add all: true
+      g.commit("Switching to #{version[0]}")
+      g.add_tag("#{version[0]}tmp")
       if options[:back]
-        g = Git.open'.'
         g.checkout('master')
         say("Switched to the current version of the document".colorize :green)
       else
