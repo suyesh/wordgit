@@ -38,7 +38,7 @@ module Wordgit
     method_option :message, aliases: "-m", desc: "Add message to the commit.",required: true
     method_option :version, type: :numeric,aliases: "-v", desc: "Add version number", required: true
     method_options all: false
-    def commit
+    def commit(*path)
       init_message unless check_init
       if options[:all]
         Dir['**/*.docx'].reject{ |f| f['./.git'] || f['./.wrdgit'] }.each {|word_file| create_files_and_folders word_file, "v#{options[:version]}"}
