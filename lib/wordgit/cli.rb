@@ -58,7 +58,7 @@ module Wordgit
           g.add all: true
           g.commit(message)
           g.add_tag("v#{version}")
-      rescue => Git::GitExecuteError
+      rescue Git::GitExecuteError
         say("Sorry but the document could not be commited, please check your input and try again.".colorize :red)
       end
     end
