@@ -34,12 +34,12 @@ module Wordgit
     ## wordgit commit -m 'a message' -v [VERSION] will commit the changes with a message and a tag
     ####################################################################################################################
 
-    desc "commit '[PATH] OR --all'", "Commits the changes to the repo. -m followed by message as string 'your message' is required"
-    method_option :message, aliases: "-m", desc: "Add message to the commit.",required: true
-    method_option :version, type: :numeric,aliases: "-v", desc: "Add version number", required: true
+    desc "commit '[PATH] OR --all'", "Commits the changes to the repo."
     method_options all: false
     def commit(*path)
       init_message unless check_init
+      message = ask("Message: ".colorize :blue)
+      version = ask("Version: ".colorze :blue)
       if options[:all]
         Dir['**/*.docx'].reject{ |f| f['./.git'] || f['./.wrdgit'] }.each do |word_file|
           next if word_file.start_with?('~$MS')
@@ -55,8 +55,8 @@ module Wordgit
       end
       g = Git.open'.'
       g.add all: true
-      g.commit(options[:message])
-      g.add_tag("v#{options[:version]}")
+      g.commit(message)
+      g.add_tag("v#{version}")
     end
 
     ####################################################################################################################
