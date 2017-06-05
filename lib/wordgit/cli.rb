@@ -39,7 +39,7 @@ module Wordgit
     def commit(*path)
       init_message unless check_init
       message = ask("Message: ".colorize :blue)
-      version = ask("Version: ".colorze :blue)
+      version = ask("Version: ".colorize :blue)
       if options[:all]
         Dir['**/*.docx'].reject{ |f| f['./.git'] || f['./.wrdgit'] }.each do |word_file|
           next if word_file.start_with?('~$MS')
