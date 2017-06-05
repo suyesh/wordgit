@@ -28,13 +28,13 @@ Commands:
 
 ```
 
-#STEP 1 (initialize)
+# STEP 1 (initialize)
 
 ```ruby
 $ wordgit init #Initialize wordgit in folder with word documents you want to track
 ```
 
-#STEP 2 (commit)
+# STEP 2 (commit)
 
 ```ruby
 #This will start tracking the document. You must provide a message and version in the prompt.
@@ -62,13 +62,14 @@ $ wordgit revert [VERSION NUMBER] #reverts the changes to particular version
 $ wordgit diff [VERSION1] [VERSION2] #opens up GUI to display differences in versions
 ```
 
-#TODO: LOT OF THINGS. The most important ones in works are:
+# TODO: LOT OF THINGS. The most important ones in works are:
+
 1. Difference (between versions) viewer UI
 2. Merge tool
 
-##Rubygems.org
+# Rubygems.org
 Hosted at [Rubygems.org](https://rubygems.org/gems/s3_patron)
 
-## License
+# License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
