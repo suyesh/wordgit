@@ -20,7 +20,7 @@ $ wordgit -h
 
 Commands:
   wordgit commit '[PATH] OR --all'    # Commits the changes to the repo.
-  wordgit diff [VERSION1] [VERSION2]  # Displays differences between two versions
+  wordgit diff [VERSION1] [VERSION2]  # Displays differences between two versions (WORK IN PROGRESS)
   wordgit help [COMMAND]              # Describe available commands or one specific command
   wordgit revert [VERSION]            # revert between version
   wordgit switch [VERSION]            # Switch between version
