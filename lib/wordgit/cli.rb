@@ -53,10 +53,14 @@ module Wordgit
       else
         say("You need to provide a file path or you can pass an option '--all' to track all files".colorize :blue)
       end
-      g = Git.open'.'
-      g.add all: true
-      g.commit(message)
-      g.add_tag("v#{version}")
+      begin
+          g = Git.open'.'
+          g.add all: true
+          g.commit(message)
+          g.add_tag("v#{version}")
+      rescue => Git::GitExecuteError
+        say("Sorry but the document could not be commited, please check your input and try again.".colorize :red)
+      end
     end
 
     ####################################################################################################################
