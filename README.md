@@ -28,6 +28,40 @@ Commands:
 
 ```
 
+#STEP 1 (initialize)
+
+```ruby
+$ wordgit init #Initialize wordgit in folder with word documents you want to track
+```
+
+#STEP 2 (commit)
+
+```ruby
+#This will start tracking the document. You must provide a message and version in the prompt.
+
+$ wordgit commit ./my_word_document.docx #you can provide individual file
+
+#OR
+
+$wordgit commit --all #entire folder
+```
+
+```shell
+$ wordgit versions #displays all the versions
+```
+
+```shell
+$ wordgit switch [VERSION NUMBER] #Switches to particular version
+```
+
+```shell
+$ wordgit revert [VERSION NUMBER] #reverts the changes to particular version
+```
+
+```shell
+$ wordgit diff [VERSION1] [VERSION2] #opens up GUI to display differences in versions
+```
+
 #TODO: LOT OF THINGS. The most important ones in works are:
 1. Difference (between versions) viewer UI
 2. Merge tool
