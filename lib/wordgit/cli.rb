@@ -94,9 +94,7 @@ module Wordgit
     def switch(*version)
       init_message unless check_init
       g = Git.open'.'
-      g.add all: true
-      g.commit("Switching to #{version[0]}")
-      g.add_tag("#{version[0]}tmp")
+      system('git stash')
       if options[:back]
         g.checkout('master')
         say("Switched to the current version of the document".colorize :green)
