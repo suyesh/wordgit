@@ -105,7 +105,6 @@ module Wordgit
       else
         g.checkout("v#{version[0]}")
         say("Switched to the v#{version[0]} of the document".colorize :green)
-        # say("DONT FORGET TO SWITCH TO THE MAIN VERSION ONCE YOU ARE DONE".colorize :red)
       end
     end
 
